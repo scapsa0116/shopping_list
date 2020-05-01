@@ -1,33 +1,28 @@
+# frozen_string_literal: true
+
+# userscontroller
 class UsersController < ApplicationController
-
-  get "/signup" do
-    erb :"/users/new.html"
+  get '/signup' do
+    erb :'/users/new.html'
   end
 
-  get "/login" do
-    erb :"users/login.html"
+  get '/login' do
+    erb :'users/login.html'
   end
 
-  post "/login" do
+  post '/login' do
     redirect '/users/:id'
-  end 
-  
-  post "/logout" do
+  end
+
+  post '/logout' do
     redirect '/'
   end
 
-  #shows all items
-  get "/users/:id" do
-    erb :"/users/show.html"
+  get '/users/:id' do
+    erb :'/users/show.html'
   end
 
-  post "/users/new" do
-    #@user = User.create(username: params[:username], password params[:password], email: params[:email])
-    redirect "/login"
+  post '/users/new' do
+    redirect '/login'
   end
 end
-
-  
-  
-
-  

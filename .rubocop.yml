@@ -1,0 +1,10 @@
+AllCops:
+  Exclude: 
+      - db/*
+      - db/migrate/*
+Metrics/LineLength:
+  # This will disable the rule comleteley, regardless what other options you put
+  Enabled: false
+
+
+    
