@@ -10,19 +10,21 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-ActiveRecord::Schema.define(version: 202_005_010_200_26) do
-  create_table 'items', force: :cascade do |t|
-    t.string   'name'
-    t.integer  'user_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+
+ActiveRecord::Schema.define(version: 20200501020026) do
+
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'users', force: :cascade do |t|
-    t.string   'username'
-    t.string   'passwordd_digest'
-    t.string   'email'
-    t.datetime 'created_at',       null: false
-    t.datetime 'updated_at',       null: false
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "passwordd_digest"
+    t.string   "email"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 end
