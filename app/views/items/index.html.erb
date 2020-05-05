@@ -1,1 +1,9 @@
-<h1>This is the Model's index page.</h1>
+<p>Wellcome <%= current_user.username %> </p>
+
+<h2> Items </h2>
+
+<% @items.each do |item| %>
+    <div>
+      <%= item.name %>
+    </div>
+  <% end %>

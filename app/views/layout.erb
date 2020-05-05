@@ -8,7 +8,15 @@
   </head>
   <body>
     <div class='wrapper'>
-        <%= yield %>
+    <% if logged_in? %>
+      Welcome, <%= "#{current_user.username}" %>
+      <a href="/logout">Sign Out</a><br>
+    <% else %>
+      Welcome!
+      <a href="/signup">Sign up</a>
+      <a href="/login">Log In</a><br>
+    <% end %>
+    <%= yield %>
       <footer class='branding'>
         <small>&copy; 2020 <strong>ShoppingList</strong></small>
       </footer>

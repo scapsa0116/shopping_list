@@ -1,1 +1,7 @@
-<h1>Insert the form to edit an instance of your model here.</h1>
+<h2> Edit Item </h2>
+
+<form method="post" action="/items/<%=@item.id%>">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <input type="text" name="name" value="<%= @item.name %>">
+  <input type="submit" value="submit">
+</form>
