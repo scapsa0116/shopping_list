@@ -13,9 +13,7 @@ class ItemsController < ApplicationController
   
   
   get '/items/new' do
-    if !logged_in?
-      redirect '/login'
-      end
+    redirect '/login' if !logged_in?
     erb :'/items/new.html'
   end
 
@@ -35,7 +33,7 @@ class ItemsController < ApplicationController
   get '/items/:id' do
     if !logged_in?
       redirect '/login'
-      end
+    end
       @item = Item.find_by_id(params[:id])
       erb :'/items/show.html'
   end

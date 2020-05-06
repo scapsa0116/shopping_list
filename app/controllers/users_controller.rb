@@ -2,12 +2,13 @@
 
 # userscontroller
 class UsersController < ApplicationController
+  
   get '/signup' do
     if logged_in?
       redirect '/items' 
      else
     erb :'/users/new.html'
-  end
+     end 
 end 
 
   post '/signup' do 
@@ -52,13 +53,16 @@ end
   end
 
   post '/logout' do
-    if logged_in?
+    # if logged_in?
       logout!
-      session.clear
-     redirect '/login'
-     else   
-    redirect '/'
-  end
+    # session.clear
+    #  redirect '/login'
+    #  else   
+    #binding.pry
+  
+    erb '/users/logout.html'
+    #redirect '/'
+
  end
 end 
   

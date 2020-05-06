@@ -1,16 +1,16 @@
 <h2>
-  Tweets by <%= @user.username %>
+  Items by <%= @user.username %>
 </h2>
  <form action="/users/<%= @user.slug %>" method="post">
   <input id="hidden" type="hidden" name="_method" value="patch">
    <input type="text" name="username">
    <input type="submit" value="submit">
 </form>
-<h2>tweeting!</h2> 
+<h2>Items!</h2> 
 <ul>
-  <% @user.tweets.all.each do |tweet| %>
+  <% @user.items.all.each do |item| %>
     <li>
-      <%= tweet.content %>
+      <%= item.name %>
     </li>
   <% end %>
 </ul>
