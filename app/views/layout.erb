@@ -9,13 +9,19 @@
   <body>
     <div class='wrapper'>
     <% if logged_in? %>
-      Welcome, <%= "#{current_user.username}" %>
+       Welcome, <%= "#{current_user.username}" %>!
+       <div class="container">
       <a href="/logout">Sign Out</a><br>
-      <a href "/items/new">Build new Item</a>
+      <a href="/items/new">Build new Item</a>
+      </div>
     <% else %>
-      Welcome!
+      <h1>Welcome!<h1>
+      <div class="logs">
       <a href="/signup">Sign up</a>
+      </div>
+      <div class="logs">
       <a href="/login">Log In</a><br>
+      </div>
     <% end %>
     <%= yield %>
       <footer class='branding'>

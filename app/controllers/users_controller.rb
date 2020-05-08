@@ -52,18 +52,13 @@ end
     redirect "/users/#{params[:id]}"
   end
 
-  post '/logout' do
-    # if logged_in?
+  get '/logout' do
+   
       logout!
-    # session.clear
-    #  redirect '/login'
-    #  else   
-    #binding.pry
-  
+    
     erb '/users/logout.html'
     #redirect '/'
-
- end
+  end
 end 
   
 

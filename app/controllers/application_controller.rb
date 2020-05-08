@@ -18,17 +18,20 @@ class ApplicationController < Sinatra::Base
   helpers do
 
     def logged_in?
+      #binding.pry
       !!session[:id]
     end
 
     def current_user
+     # binding.pry
       @current_user ||= User.find(session[:id]) if session[:id]
     end
 
   
 
     def logout!
-      session.clear
+      session.destroy
+      #binding.pry
     end
   end
 end

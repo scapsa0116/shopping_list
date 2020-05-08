@@ -13,14 +13,25 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: lightblue;
+    background-color: hsla(180, 30%, 92%, 0.548);
     color: #333;
     font-family: Sans-Serif;
-    line-height: 18px;
+    line-height: 50px;
+  }
+
+  .logs { background-color: rgb(141, 179, 214);
+    border: none;
+    color: white;
+    padding: 5px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+
   }
 
   .wrapper {
-    background: #fff;
+    background: rgba(139, 198, 202, 0.3);
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
