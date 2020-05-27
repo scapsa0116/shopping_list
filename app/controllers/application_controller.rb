@@ -17,6 +17,11 @@ class ApplicationController < Sinatra::Base
 
   helpers do
 
+    # def admin?
+    #   session[:admin]
+    # end
+
+
     def logged_in?
       #binding.pry
       !!session[:id]
