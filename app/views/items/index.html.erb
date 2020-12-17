@@ -1,12 +1,12 @@
-<p>Wellcome <%= current_user.username %> </p>
 
 <h2><%= current_user.username %>'s Items </h2>
 
 <% @items.each do |item| %>
   <div>
   <% if item.user == current_user%>
+   
+   <div class="item">
    <input type="checkbox">
-   <div class="items">
    <a href="/items/<%=item.id %>/edit"><%= item.name.upcase %></a>| |
    <a href="/items/<%=item.id %>/delete">Delete</a><br>
    </div>

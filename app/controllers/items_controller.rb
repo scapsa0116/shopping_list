@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
       redirect '/login'
     end
       @item = Item.find_by_id(params[:id])
-      erb :'/items/show.html'
+      redirect '/items'
   end
 
   post '/items' do

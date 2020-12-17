@@ -5,24 +5,26 @@
     <title>ShoppingList</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/main.css" />
+    
   </head>
   <body>
     <div class='wrapper'>
     <% if logged_in? %>
-       Welcome, <%= "#{current_user.username}" %>!
+       <h1>Welcome, <%= "#{current_user.username}" %></h1>
+
        <div class="container">
-      <a href="/logout">Sign Out</a><br>
-      <a href="/items/new">Build new Item</a><br>
-      <a href="/items">HOME</a><br>
+      <a href="/logout">Sign Out</a>||
+      <a href="/items/new">Build new Item</a>||
+      <a href="/items">YOUR SHOPPING LIST</a><br>
       </div>
     <% else %>
-      <h1>Welcome!<h1>
-      <div class="logs">
+
+      <h1>Welcome!</h1>
+      
       <a href="/signup">Sign up</a>
-      </div>
-      <div class="logs">
+      
       <a href="/login">Log In</a><br>
-      </div>
+      
     <% end %>
     <%= yield %>
       <footer class='branding'>

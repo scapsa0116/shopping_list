@@ -9,11 +9,22 @@
   html, body {
     height: 100%;
     width: 100%;
+    padding: 3em 1.5em;
+  }
+
+  html{
+    position:fixed;
+    top:150px;
+    text-align: center;
   }
 
   /* --- Welcome Page Styles --- */
-  body {
-    background-color: hsla(180, 30%, 92%, 0.548);
+  body  {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmh1UtvFOjSPtA4LiCziBlS5W2bw6BbyqpbQ&usqp=CAU");
+   
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
     color: #333;
     font-family: Sans-Serif;
     line-height: 50px;
@@ -29,25 +40,29 @@
     font-size: 20px;
 
   }
-
+/* 
   .wrapper {
-    background: rgba(139, 198, 202, 0.3);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7FWxMKRqFrJsQpET26CCJIvYlF4TKoVNYqA&usqp=CAU");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
     margin: 16px auto;
     max-width: 960px;
     padding: 2.25%; /* 18px / 800px */
-    width: 85%;
-  }
+    /* width: 85%;
+  } */ 
 
   h1 {
-    font-size: 36px;
+    font-size: 25px;
     line-height: 54px;
+    color: #D2691E;
   }
 
   h2 {
-    border-bottom: 2px solid #ccc;
+    /* border-bottom: 2px solid #ccc; */
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 16px;
@@ -73,7 +88,7 @@
 
   .sidebar {
     background: #eee;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     float: right;
     padding: 2.08333333333%; /* 5px / 240px */
     width: 30%; /* 240px / 800px */
@@ -88,10 +103,21 @@
   }
 
   footer.branding {
-    border-top: 2px solid #ccc;
+    /* border-top: 2px solid #ccc; */
     margin-top: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
+    
   }
+}
+
+a {
+  
+  color:#000000;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: underline;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -110,7 +136,7 @@
   .sidebar {
     background: transparent;
     border: none;
-    border-top: 2px solid #ccc;
+    /* border-top: 2px solid #ccc; */
     padding: 0;
   }
 
@@ -126,6 +152,7 @@
 }
 
 
-.items {
-  color: hotpink;
+.item a{
+  color: #DC143C;
+
 }
