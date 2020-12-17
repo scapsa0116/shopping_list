@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
       redirect '/login'
       end
       @items = Item.all 
-      erb :'/items/index.html'
+      erb :'/items/index.html' 
     end 
 
  get '/items/new' do
@@ -56,15 +56,25 @@ end
       @item = Item.find(params[:id])
       @item.name = params[:name]
       @item.save
-      redirect "/items/#{params[:id]}"
+      redirect "/items"
   end 
   
+
+  get '/items/:id/delete' do
+    if !logged_in?
+      redirect '/login'
+      end
+      @item = Item.find(params[:id])
+      redirect '/items' if @item.user !=current_user
+    erb :'/items/show.html'
+  end
+
 
   delete '/items/:id' do
     @item = Item.find(params[:id])
     redirect '/' if @item.user !=current_user
     #redirect "items/#{@item.id}/edit.html" if params [:item][:name].empty?
     @item.destroy
-    redirect "/"
+    redirect "/items"
   end
 end

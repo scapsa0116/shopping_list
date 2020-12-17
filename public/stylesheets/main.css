@@ -19,7 +19,7 @@
     line-height: 50px;
   }
 
-  .logs { background-color: rgb(141, 179, 214);
+  .logs { background-image: url('siteback.jpg') !important;
     border: none;
     color: white;
     padding: 5px 25px;
@@ -123,4 +123,9 @@
     font-size: 18px;
     line-height: 24px;
   }
+}
+
+
+.items {
+  color: hotpink;
 }

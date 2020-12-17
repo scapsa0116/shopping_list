@@ -1,5 +1,7 @@
-
+<h1>Are you sure you wanna delete this item from your list? </h1>
 <%= @item.name %>
+
+
 
 <form action="/items/<%= @item.id %>" method="post">
   <input id="hidden" type="hidden" name="_method" value="delete">
