@@ -16,21 +16,15 @@ class ItemsController < ApplicationController
     erb :'/items/new.html'
   end
 
-  get '/items/:id' do
-    if !logged_in?
-      redirect '/login'
-    end
-      @item = Item.find_by_id(params[:id])
-      redirect '/items'
-  end
+   
 
   post '/items' do
     if !logged_in?
       redirect '/login'
       end
-      @item = current_user.items.create(params)
+      @item = current_user.items.build(params)
       if @item.save
-        redirect "/items/#{@item.id}"
+        redirect "/items"
       else
     redirect '/items/new.html'
   end

@@ -56,8 +56,8 @@ end
    
       logout!
     
-    erb '/users/logout.html'
-    #redirect '/'
+    # erb :'/users/logout.html'
+    redirect '/'
   end
 end 
   
