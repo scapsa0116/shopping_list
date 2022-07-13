@@ -2,7 +2,7 @@
 
 source 'http://rubygems.org'
 
-gem 'activerecord', '~> 4.2', '>= 4.2.6', require: 'active_record'
+gem 'activerecord', '~> 5.2', require: 'active_record'
 gem 'bcrypt'
 gem 'rake'
 gem 'require_all'
